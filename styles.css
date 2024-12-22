@@ -1,0 +1,532 @@
+:root {
+  --font-family: "Inter", sans-serif;
+  --container-max-width: 1280px;
+  --container-padding-inline: 16px;
+  --color-white: #ffffff;
+  --color-gray-50: #f9fafb;
+  --color-gray-100: #f3f4f6;
+  --color-gray-200: #e5e7eb;
+  --color-gray-400: #9ca3af;
+  --color-gray-500: #6b7280;
+  --color-gray-800: #1f2a37;
+  --color-gray-900: #111928;
+  --color-purple-600: #7e3af2;
+  --color-purple-700: #7e22ce;
+  --color-purple-800: #6b21a8;
+  --color-green-500: #0e9f6e;
+  --transition-duration: 0.3s;
+  --transition-ease: ease;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  max-width: 100dvw;
+  min-height: 100dvh;
+  font-family: var(--font-family);
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+.container {
+  max-width: calc(
+    var(--container-max-width) + var(--container-padding-inline) * 2
+  );
+  padding-inline: var(--container-padding-inline);
+  margin-inline: auto;
+}
+.flex {
+  display: flex;
+}
+.flex-col {
+  flex-direction: column;
+}
+.items-center {
+  align-items: center;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.justify-center {
+  justify-content: center;
+}
+.text-gray-500 {
+  color: var(--color-gray-500);
+}
+.text-gray-900 {
+  color: var(--color-gray-900);
+}
+.text-center {
+  text-align: center;
+}
+.font-light {
+  font-weight: 300;
+}
+.font-medium {
+  font-weight: 500;
+}
+.font-semibold {
+  font-weight: 600;
+}
+.transition {
+  transition: all var(--transition-duration) var(--transition-ease);
+}
+.button {
+  display: inline-block;
+  text-align: center;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: background-color var(--transition-duration) var(--transition-ease),
+    border var(--transition-duration) var(--transition-ease);
+}
+.primary-button {
+  color: var(--color-white);
+  background-color: var(--color-purple-600);
+  border: 1px solid var(--color-purple-600);
+}
+.primary-button:hover {
+  background-color: var(--color-purple-800);
+  border: 1px solid var(--color-purple-800);
+}
+.secondary-button {
+  color: var(--color-gray-900);
+  border: 1px solid var(--color-gray-200);
+  color: var(--color-gray-800);
+}
+.secondary-button:hover {
+  background-color: var(--color-gray-100);
+}
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background-color: var(--color-white);
+  z-index: 1;
+  box-shadow: 0 -1px 36px -14px #00000033;
+}
+.header-container {
+  padding-block: 18px;
+}
+.header-container .logo-nav {
+  gap: 32px;
+}
+.header-container .logo-nav .logo {
+  gap: 12px;
+}
+.header-container .logo-nav .logo img {
+  width: 29.76px;
+  height: 32.62px;
+}
+.header-container .logo-nav .logo span {
+  font-size: 24px;
+}
+.header-container .logo-nav ul {
+  gap: 32px;
+}
+.header-container .logo-nav ul a:hover {
+  color: var(--color-purple-700);
+}
+.header-container .buttons {
+  gap: 16px;
+}
+.header-container .buttons .button {
+  font-size: 14px;
+  padding: 8px 12px;
+}
+.hero {
+  padding-top: 149px;
+}
+.hero .content {
+  max-width: 670px;
+}
+.hero .content h1 {
+  font-size: 60px;
+  font-weight: 900;
+  line-height: 60px;
+  letter-spacing: -1.5px;
+}
+.hero .content p {
+  font-size: 20px;
+  line-height: 30px;
+  margin-block: 24px 40px;
+}
+.hero .buttons {
+  gap: 16px;
+}
+.hero .buttons .button {
+  padding: 12px 20px;
+}
+.hero img {
+  width: 532px;
+  height: 416px;
+}
+.partners {
+  margin-block: 64px 96px;
+}
+.partners .logo svg:hover {
+  color: var(--color-gray-900);
+  scale: 1.04;
+}
+.partners .logo:not(:last-child) svg {
+  height: 36px;
+}
+.partners .logo:last-child svg {
+  height: 24px;
+}
+.features {
+  background-color: var(--color-gray-50);
+}
+.features .container {
+  padding-block: 96px;
+}
+.features .tools {
+  margin-bottom: 80px;
+}
+.features .tools p:last-child {
+  margin-top: 24px;
+}
+.features img {
+  width: 598px;
+  height: 434px;
+}
+.features .content {
+  max-width: 608px;
+}
+.features h2 {
+  font-size: 36px;
+  font-weight: 800;
+  letter-spacing: -0.75px;
+}
+.features p {
+  font-size: 20px;
+  line-height: 30px;
+  margin-top: 16px;
+}
+.features .horizontal-line {
+  display: block;
+  margin-block: 32px;
+  background-color: var(--color-gray-200);
+  width: 100%;
+  height: 1px;
+}
+.features ul {
+  gap: 16px;
+}
+.features li {
+  gap: 10px;
+}
+.features svg {
+  color: var(--color-purple-600);
+  width: 20px;
+  height: 20px;
+}
+.trusted {
+  padding-block: 96px;
+}
+.trusted .content {
+  max-width: 640px;
+}
+.trusted .content h2 {
+  color: var(--color-purple-600);
+  font-size: 18px;
+}
+.trusted .content h3 {
+  font-size: 36px;
+  font-weight: 800;
+  letter-spacing: -0.75px;
+  margin-block: 12px 16px;
+}
+.trusted .content p {
+  font-size: 20px;
+  line-height: 30px;
+}
+.trusted .content .horizontal-line {
+  display: block;
+  margin-block: 24px;
+  background-color: var(--color-gray-200);
+  width: 100%;
+  height: 1px;
+}
+.trusted .content ul {
+  gap: 16px;
+}
+.trusted .content ul a {
+  gap: 8px;
+  color: var(--color-purple-600);
+}
+.trusted .content ul a:hover {
+  color: var(--color-purple-800);
+}
+.trusted .content ul svg {
+  width: 20px;
+  height: 20px;
+}
+.trusted .cards {
+  max-width: 544px;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+.trusted .cards div {
+  max-width: 256px;
+}
+.trusted .cards svg {
+  color: var(--color-purple-600);
+  width: 40px;
+  height: 40px;
+}
+.trusted .cards h3 {
+  font-size: 24px;
+  margin-block: 16px 8px;
+}
+.testimonials {
+  background-color: var(--color-gray-50);
+}
+.testimonials .container {
+  padding-block: 96px;
+}
+.testimonials figure {
+  max-width: 768px;
+  margin-inline: auto;
+}
+.testimonials svg {
+  width: 48px;
+  height: 48px;
+  color: var(--color-gray-400);
+}
+.testimonials q {
+  font-size: 24px;
+  line-height: 39px;
+  margin-block: 30px 24px;
+  display: block;
+}
+.testimonials figcaption {
+  gap: 14px;
+}
+.testimonials figcaption img {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+.testimonials figcaption h2 {
+  gap: 12px;
+}
+.testimonials figcaption h2 a {
+  font-size: 16px;
+}
+.testimonials figcaption h2 a:hover {
+  color: var(--color-purple-600);
+}
+.testimonials figcaption h2 span {
+  font-size: 14px;
+}
+.pricing-plans {
+  padding-block: 96px;
+}
+.pricing-plans h2 {
+  font-size: 36px;
+  font-weight: 800;
+  letter-spacing: -0.75px;
+}
+.pricing-plans > p {
+  font-size: 20px;
+  line-height: 30px;
+  margin: 16px auto 48px;
+  max-width: 768px;
+}
+.pricing-plans .plan-card {
+  padding: 32px;
+  border: 1px solid var(--color-gray-200);
+  border-radius: 8px;
+  background-color: var(--color-white);
+  flex-basis: 400px;
+}
+.pricing-plans .plan-card:hover {
+  scale: 1.04;
+  box-shadow: 0px 2px 4px -2px #0000000d, 0px 4px 6px -1px #0000001a;
+}
+.pricing-plans .plan-card h3 {
+  font-size: 24px;
+}
+.pricing-plans .plan-card p {
+  font-size: 18px;
+  line-height: 30px;
+  margin-block: 16px 32px;
+}
+.pricing-plans .plan-card h4 span:first-child {
+  font-size: 48px;
+  font-weight: 800;
+  display: inline-block;
+  margin-right: 10px;
+}
+.pricing-plans .plan-card h4 span:last-child {
+  font-size: 18px;
+  line-height: 30px;
+}
+.pricing-plans .plan-card ul {
+  margin-block: 32px;
+  gap: 23px;
+}
+.pricing-plans .plan-card li {
+  gap: 14px;
+}
+.pricing-plans .plan-card svg {
+  width: 20px;
+  height: 20px;
+  color: var(--color-green-500);
+}
+.pricing-plans .plan-card .button {
+  display: block;
+  padding: 10px 20px;
+}
+.faq {
+  padding-bottom: 96px;
+}
+.faq h2 {
+  font-size: 36px;
+  font-weight: 800;
+  letter-spacing: -0.75px;
+}
+.faq-container {
+  max-width: 695px;
+  margin: 32px auto 0;
+}
+.faq-container .faq-item {
+  list-style: none;
+}
+.faq-container .faq-item[open] {
+  border-bottom: 1px rgb(229, 231, 235) solid;
+}
+.faq-container .faq-item summary {
+  cursor: pointer;
+  padding-block: 24px;
+}
+.faq-container .faq-item summary:not(:last-child) {
+  border-bottom: 1px rgb(229, 231, 235) solid;
+}
+.faq-container .faq-item summary {
+  list-style: none;
+}
+.faq-container .faq-item summary svg {
+  width: 24px;
+  height: 24px;
+}
+.faq-container .faq-item summary svg {
+  fill: var(--color-gray-500);
+}
+.faq-container .faq-item[open] summary span {
+  color: var(--color-gray-900);
+}
+.faq-container .faq-item[open] summary svg {
+  fill: var(--color-gray-900);
+  rotate: 180deg;
+}
+.faq-container .faq-item summary::-webkit-details-marker {
+  display: none;
+}
+.faq-container .faq-item summary::marker {
+  display: none;
+}
+.faq-container .faq-item .content {
+  padding-block: 20px;
+}
+.faq-container .faq-item p {
+  line-height: 30px;
+}
+.faq-container .faq-item p.mt {
+  margin-top: 6px;
+}
+.faq-container .faq-item a {
+  color: var(--color-purple-600);
+}
+.faq-container .faq-item a:hover {
+  color: var(--color-purple-800);
+  text-decoration: underline;
+}
+.faq-container .faq-item ul {
+  margin-top: 6px;
+  list-style: disc;
+  list-style-position: inside;
+  gap: 10px;
+}
+.faq-container .faq-item ul li::marker {
+  color: var(--color-gray-500);
+}
+.free-trial {
+  background-color: var(--color-gray-50);
+}
+.free-trial .container {
+  padding-block: 96px;
+}
+.free-trial h2 {
+  font-size: 36px;
+  font-weight: 800;
+  letter-spacing: -0.75px;
+}
+.free-trial p {
+  font-size: 20px;
+  line-height: 30px;
+  margin-block: 24px;
+}
+.free-trial .button {
+  padding: 12px 20px;
+}
+.footer {
+  padding-block: 64px;
+}
+.footer .footer-main .column {
+  gap: 16px;
+}
+.footer .footer-main h3 {
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.footer .footer-main ul {
+  gap: 16px;
+}
+.footer .footer-main ul a:hover {
+  text-decoration: underline;
+}
+.footer .horizontal-line {
+  display: block;
+  margin-block: 24px;
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-gray-200);
+}
+.footer .footer-sub .logo {
+  gap: 12px;
+}
+.footer .footer-sub .logo img {
+  width: 29.76px;
+  height: 32.62px;
+}
+.footer .footer-sub .logo span {
+  font-size: 24px;
+}
+.footer .footer-sub p {
+  font-size: 14px;
+  margin-block: 20px;
+}
+.footer .footer-sub p a {
+  color: var(--color-purple-600);
+}
+.footer .footer-sub p a:hover {
+  color: var(--color-purple-800);
+  text-decoration: underline;
+}
+.footer .footer-sub ul {
+  gap: 20px;
+}
+.footer .footer-sub ul a:hover {
+  color: var(--color-gray-900);
+}
+.footer-sub ul a svg {
+  width: 20px;
+  height: 20px;
+}
